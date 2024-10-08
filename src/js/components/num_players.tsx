@@ -6,8 +6,8 @@ import {
   Distribution,
   distributionForCount,
   zeroDistribution,
-} from "botc/setup";
-import { Button } from "randomizer/components/button";
+} from "../botc/setup";
+import { Button } from "../randomizer/components/button";
 import { SetStateAction } from "react";
 import React from "react";
 

@@ -18,8 +18,8 @@ import {
 } from "./state";
 import { TownsquareImage } from "./tokens/townsquare_image";
 import { css } from "@emotion/react";
-import { CharacterInfo, getCharacter } from "botc/roles";
-import { Script } from "botc/script";
+import { CharacterInfo, getCharacter } from "../botc/roles";
+import { Script } from "../botc/script";
 import {
   effectiveDistribution,
   modifyingCharacters,
@@ -27,12 +27,12 @@ import {
   selectableCharacters,
   splitSelectedChars,
   targetDistributions,
-} from "botc/setup";
-import { NumPlayerSelector } from "components/num_players";
-import { FullscreenRole } from "components/role_fullscreen";
+} from "../botc/setup";
+import { NumPlayerSelector } from "../components/num_players";
+import { FullscreenRole } from "../components/role_fullscreen";
 import React, { SetStateAction, useEffect, useState } from "react";
-import { restoreScroll } from "routing";
-import { visibleClass } from "tabs";
+import { restoreScroll } from "../routing";
+import { visibleClass } from "../tabs";
 
 export function Randomizer({
   script,

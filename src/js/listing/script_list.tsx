@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { nameToId } from "botc/roles";
+import { nameToId } from "../botc/roles";
 import {
   ScriptData,
   getCharacterList,
@@ -9,9 +9,9 @@ import {
   hasHeretic,
   isTeensyville,
   onlyBaseThree,
-} from "botc/script";
+} from "../botc/script";
 import { darken } from "polished";
-import { pageUrl } from "routing";
+import { pageUrl } from "../routing";
 
 export const BaseThree = [178, 180, 181];
 
