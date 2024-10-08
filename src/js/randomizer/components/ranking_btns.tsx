@@ -11,7 +11,7 @@ import { ScriptState } from "../state";
 import { Button } from "./button";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Ranking, randomRanking } from "randomizer/ranking";
+import { Ranking, randomRanking } from "../../randomizer/ranking";
 import { Dispatch, PropsWithChildren, useContext } from "react";
 
 const IconButton = styled(Button)`

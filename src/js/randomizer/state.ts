@@ -1,6 +1,6 @@
 import { Ranking } from "./ranking";
 import localforage from "localforage";
-import { isCorrectPassword } from "password";
+import { isCorrectPassword } from "../password";
 
 export interface ScriptState {
   scriptTitle: string;

@@ -20,7 +20,7 @@ import { ToggleAllRoles, isActive } from "./toggle_roles";
 import { css, useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import classnames from "classnames";
-import { FullscreenBluffs } from "randomizer/components/bluffs";
+import { FullscreenBluffs } from "../randomizer/components/bluffs";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import reactStringReplace from "react-string-replace";
 

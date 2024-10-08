@@ -9,8 +9,8 @@ import { CardInfo, CharacterCard } from "./characters";
 import { RankingBtns } from "./ranking_btns";
 import { BagSetupHelp } from "./setup_help";
 import { css } from "@emotion/react";
-import { Column, ColumnContainer } from "randomizer/columns";
-import { Ranking } from "randomizer/ranking";
+import { Column, ColumnContainer } from "../../randomizer/columns";
+import { Ranking } from "../../randomizer/ranking";
 import { useContext } from "react";
 
 export function charKey(character: BagCharacter): string {

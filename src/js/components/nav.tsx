@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 import { lighten } from "polished";
 import React, { PropsWithChildren } from "react";
-import { theme } from "theme";
+import { theme } from "../theme";
 
 const NavItem = styled.a`
   display: flex;

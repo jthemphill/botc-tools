@@ -1,6 +1,6 @@
 import images from "../../../assets/icons/*.webp";
 import { css } from "@emotion/react";
-import { characterIdWithoutNumber, getCharacter } from "botc/roles";
+import { characterIdWithoutNumber, getCharacter } from "../botc/roles";
 
 export function iconPath(id: string): string {
   id = characterIdWithoutNumber(id);

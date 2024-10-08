@@ -1,5 +1,6 @@
 {
   "name": "botc_tools",
+  "type": "module",
   "source": [
     "src/index.html",
     "src/script.html"
@@ -7,8 +8,11 @@
   "scripts": {
     "fetch-assets": "ts-node fetch_assets/src/main.ts",
     "test-screenshots": "ts-node test/screenshot.ts",
+    "preview": "vite preview",
     "start": "parcel serve",
+    "start:vite": "vite --open",
     "build": "parcel build --public-url '.'",
+    "build:vite": "vite build",
     "postbuild": "workbox generateSW",
     "fullbuild": "yarn run fetch-assets && yarn run build",
     "lint": "eslint src fetch_assets test",
@@ -38,6 +42,7 @@
     "@types/sharp": "^0.31.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
+    "@vitejs/plugin-react-swc": "^3.7.1",
     "assert": "^2.0.0",
     "crypto-browserify": "^3.12.0",
     "eslint": "^8.42.0",
@@ -59,6 +64,7 @@
     "typescript": "5.5.4",
     "url": "^0.11.0",
     "util": "^0.12.3",
+    "vite": "^5.4.8",
     "vm-browserify": "^1.1.2",
     "workbox-cli": "^7.0.0"
   },
