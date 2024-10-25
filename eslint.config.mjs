@@ -1,6 +1,7 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
+import reactCompiler from "eslint-plugin-react-compiler";
 import tsParser from "@typescript-eslint/parser";
 
 export default [
@@ -8,6 +9,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     plugins: {
+      "react-compiler": reactCompiler,
       "unused-imports": unusedImports,
     },
 
@@ -29,6 +31,8 @@ export default [
           varsIgnorePattern: "^_",
         },
       ],
+
+      "react-compiler/react-compiler": "error",
     },
   },
 ];

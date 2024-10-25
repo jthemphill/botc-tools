@@ -1,7 +1,7 @@
 import { BagCharacter } from "../../botc/setup";
 import { iconPath } from "../../components/character_icon";
 import { circleWidthAt, drawTextAlongArc, setCanvasResolution } from "./canvas";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 function splitLinesCircle(
   // measure the width of some text
@@ -185,28 +185,27 @@ export function TokenCanvas(props: {
   size: string;
   maxSize?: string;
 }): JSX.Element {
-  const ref = useRef<HTMLCanvasElement>(null);
+  return (
+    <canvas
+      ref={(canvas: HTMLCanvasElement | null) => {
+        if (!canvas) {
+          return;
+        }
+        // don't rely on devicePixelRatio since we want a high-resolution image for
+        // export
+        setCanvasResolution(canvas, 240, 240, 2);
+        canvas.style.width = `${props.size}`;
+        canvas.style.height = `${props.size}`;
+        const maxSize = props.maxSize || "100vw";
+        canvas.style.maxWidth = maxSize;
+        canvas.style.maxHeight = maxSize;
 
-  useEffect(() => {
-    if (!ref.current) {
-      return;
-    }
-    const canvas = ref.current;
-    // don't rely on devicePixelRatio since we want a high-resolution image for
-    // export
-    setCanvasResolution(canvas, 240, 240, 2);
-    canvas.style.width = `${props.size}`;
-    canvas.style.height = `${props.size}`;
-    const maxSize = props.maxSize || "100vw";
-    canvas.style.maxWidth = maxSize;
-    canvas.style.maxHeight = maxSize;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) {
-      return;
-    }
-    drawToken(ctx, props.character);
-  }, []);
-
-  return React.createElement("canvas", { ref });
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          return;
+        }
+        drawToken(ctx, props.character);
+      }}
+    />
+  );
 }
