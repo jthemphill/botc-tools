@@ -87,7 +87,6 @@
     "react-dom": "^18.2.0",
     "react-qr-code": "^2.0.11",
     "react-string-replace": "^1.1.0",
-    "sharp": "^0.31.1",
     "workbox-window": "^7.0.0"
   },
   "staticFiles": {
